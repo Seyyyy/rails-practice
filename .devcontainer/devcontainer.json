@@ -1,10 +1,13 @@
 {
   "name": "Rails Devcontainer",
-  "dockerComposeFile": ["docker-compose.yml"],
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
   "service": "app",
   "workspaceFolder": "/app",
   "customizations": {
     "vscode": {
+      "rubyLsp.rubyExecutablePath": "/usr/local/bin/ruby",
       "extensions": [
         "Shopify.ruby-lsp"
       ]
