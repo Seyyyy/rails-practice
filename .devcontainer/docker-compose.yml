@@ -22,5 +22,11 @@ services:
       - db-store:/var/lib/mysql
     ports:
       - 3306:3306
+  pgadmin:
+    image: adminer
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
 volumes:
   db-store:
