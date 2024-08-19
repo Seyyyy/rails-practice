@@ -5,4 +5,6 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 10 }
+
+  after_create -> { Rails.logger.info("Article #{title} has been created") }
 end
